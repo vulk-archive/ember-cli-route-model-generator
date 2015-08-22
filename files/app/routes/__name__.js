@@ -45,7 +45,7 @@ export default Ember.Route.extend({
  
       var model = this.modelFor(this.routeName);        
       // debugger;
-      model.<%= camelizedModuleName %>.save().then(onSuccess, onFail);
+      model.save().then(onSuccess, onFail);
     },
       
   }
