@@ -1,5 +1,19 @@
 <h1><%= classifiedModuleName %></h1>
 <ul>
-{{#each <%= dasherizedModuleName %> in model}}
-{{/each}}
+  {{#each <%= dasherizedModuleName %> in model}}
+  <li>
+    {{#if <%= dasherizedModuleName %>.isNew}}
+    <div class="form-field for-text">
+      {{input type="text" placeholder="New <%= classifiedModuleName %>" value=<%= dasherizedModuleName %>.name}}
+    </div>
+    {{else}}
+    {{<%= dasherizedModuleName %>.name}}
+    {{/if}}
+  </li>
+  {{/each}}
 </ul>
+
+<!-- <li>{{!#link&#45;to 'email&#45;domain' model.company.id}}Add Email Domain{{!/link&#45;to}}</li> -->
+<a href='#' {{action '<%='add' + camelizedModuleName %>'}} class='button'>Add <%= classifiedModuleName %></a>
+<a href='#' {{action '<%='save' + camelizedModuleName %>'}} class='button'>Save <%= classifiedModuleName %></a>
+
