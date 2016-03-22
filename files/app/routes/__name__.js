@@ -18,11 +18,11 @@ export default Ember.Route.extend({
     return this.store.findAll('<%= dasherizedModuleName %>').then(onSuccess, onFail);
   },
   actions: {
-    <%= 'add' + camelizedModuleName %>: function() {    
+    <%= 'add' + classifiedModuleName %>: function() {    
       this.controllerFor('<%= dasherizedModuleName %>').store.createRecord('<%= dasherizedModuleName %>');
       
     },
-    <%= 'save' + camelizedModuleName %>: function(){    
+    <%= 'save' + classifiedModuleName %>: function(){    
       var onSuccess = function() {    
         alert('<%= classifiedModuleName %> Saved.');   
       };
