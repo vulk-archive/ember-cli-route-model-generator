@@ -1,6 +1,6 @@
 <h1><%= classifiedModuleName %></h1>
 <ul>
-  {{#each <%= dasherizedModuleName %> in model}}
+  {{#each model as |<%= dasherizedModuleName %>|}}
   <li>
     {{#if <%= dasherizedModuleName %>.isNew}}
     <div class="form-field for-text">
