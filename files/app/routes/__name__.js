@@ -1,4 +1,8 @@
 import Ember from 'ember';
+// import onFailure404Ok from '<<main-application-directory-name>>/utils/on-failure-404-ok';
+// import onFailure from '<<main-application-directory-name>>/utils/on-failure';
+// import onSuccessReturnResponse from '<<main-application-directory-name>>/utils/on-success-return-response';
+// import onFailure404Create from 'beneplace3000/utils/on-failure-404-create';
 
 export default Ember.Route.extend({
   model: function(){
@@ -19,7 +23,7 @@ export default Ember.Route.extend({
   },
   actions: {
     <%= 'add' + classifiedModuleName %>: function() {    
-      this.controllerFor('<%= dasherizedModuleName %>').store.createRecord('<%= dasherizedModuleName %>');
+      this.controllerFor(this.routeName).store.createRecord('<%= dasherizedModuleName %>');
       
     },
     <%= 'save' + classifiedModuleName %>: function(){    
