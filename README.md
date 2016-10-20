@@ -1,3 +1,9 @@
+In the base directory of your ember appplicatuon
+```
+mkdir blueprints
+cd blueprints
+```
+
 In the blueprints directory:
 
 ```
